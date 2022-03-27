@@ -14,7 +14,6 @@ import java.net.URL
 @RunWith(AndroidJUnit4::class)
 class HttpConnectionTestingVolley {
 
-    @Ignore
     @Test
     fun testConnectionToGoogle() {
         val url = URL("http://www.google.com/")
@@ -23,7 +22,8 @@ class HttpConnectionTestingVolley {
             Assert.assertEquals("Response code from $url not as expected", 200, responseCode)
         }
     }
-    @Ignore
+
+
     @Test
     fun testConnectionToThatApiGuy() {
         val url = URL("https://thatapiguy.com/")
