@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyFreeCatsApp</string>
+    <string name="search_cats">Search cats:</string>
+    <string name="get_1_random_cat">Get 1 random cat</string>
+    <string name="todo">TODO</string>
+    <string name="search_by_text">search by text</string>
 </resources>

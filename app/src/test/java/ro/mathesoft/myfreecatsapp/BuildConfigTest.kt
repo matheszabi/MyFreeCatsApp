@@ -9,9 +9,13 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class ExampleUnitTest {
+class BuildConfigTest {
+
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun api_key_loaded() {
+
+        assertNotNull(BuildConfig.CAT_API_KEY)
+
+        assertEquals(36, BuildConfig.CAT_API_KEY.length)
     }
 }
