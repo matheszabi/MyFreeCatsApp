@@ -38,11 +38,10 @@ class MainActivity : AppCompatActivity() , CoroutineScope by MainScope(){
             // load the image with http connection or any other helper library: https://redwerk.com/blog/advanced-feature-in-android-image-loaders-picasso-vs-glide-vs-fresco/
             //val imageView: ImageView = findViewById(R.id.image)
 
+            val drawable = Glide.with(this@MainActivity).load(imgData.imgUrl)
+
             launch (Dispatchers.Main) {
-                Glide.with(this@MainActivity).load(imgData.imgUrl)
-                    .into(imageView) // java.lang.IllegalArgumentException: You must call this method on the main thread
-                // how the fuck call an image loading process in main thread?!
-                // fucking libraries, want to control my code!!!
+                drawable.into(imageView)
             }
         }
     }
